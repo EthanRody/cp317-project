@@ -1,11 +1,45 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+}
+
+button {
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: large;
+    font-weight: bold;
+}
+
+#input-el {
+    margin: 10px 2px;
+    padding: 5px 10px;
+    width: 125px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: right;
+}
+
 #calc-buttons-div {
+    margin: auto;
     
+}
+
+#calc {
+    background-color: darkgray;
+    padding: 15px 10px;
+    border: 2px solid black;
+    max-width: 155px;
+    border-radius: 3px;
 }
 
 .num-button {
     background-color: burlywood;
+    
 }
 
 .opr-button {
-    background-color: cornflowerblue;
+    background-color: skyblue;
 }
