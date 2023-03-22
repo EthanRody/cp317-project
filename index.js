@@ -1,5 +1,5 @@
+// declare constants for document elements
 const inputEl = document.getElementById("input-el")
-
 const zeroBut = document.getElementById("0-but")
 const oneBut = document.getElementById("1-but")
 const twoBut = document.getElementById("2-but")
@@ -15,16 +15,31 @@ const divBut = document.getElementById("div-but")
 const mulBut = document.getElementById("mul-but")
 const subBut = document.getElementById("sub-but")
 const addBut = document.getElementById("add-but")
-
 const eqlBut = document.getElementById("eql-but")
 
+// declare variable
 let equation = ""
 
+// calculate result of equation on button press
 eqlBut.addEventListener("click", function(){
+    let equationArray = Array.from(equation)
+
+    for (let i = 0; i < equationArray.length; i++){
+        if (equationArray[i] === 'x') equationArray[i] = '*'
+        else if (equationArray[i] === '÷') equationArray[i] = '/'
+    }
+    let result = equationArray.join("")
+    try {
+        result = math.evaluate(equation)
+    }
+    catch(err) {
+        result = "Invalid Input"
+    }
     equation = ""
-    inputEl.value = equation
+    inputEl.value = result
 })
 
+// modify equation on button press
 zeroBut.addEventListener("click", function(){
     equation += 0
     inputEl.value = equation
