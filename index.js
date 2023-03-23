@@ -30,7 +30,7 @@ eqlBut.addEventListener("click", function(){
     }
     let result = equationArray.join("")
     try {
-        result = math.evaluate(equation)
+        result = math.evaluate(result)
     }
     catch(err) {
         result = "Invalid Input"
