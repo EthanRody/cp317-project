@@ -26,7 +26,6 @@ eqlBut.addEventListener("click", function(){
 
     for (let i = 0; i < equationArray.length; i++){
         if (equationArray[i] === 'x') equationArray[i] = '*'
-        else if (equationArray[i] === '÷') equationArray[i] = '/'
     }
     let result = equationArray.join("")
     try {
@@ -96,7 +95,7 @@ decBut.addEventListener("click", function(){
 })
 
 divBut.addEventListener("click", function(){
-    equation += '÷'
+    equation += '/'
     inputEl.value = equation
 })
 
